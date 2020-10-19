@@ -142,8 +142,12 @@ public class PaymentApprovedFragment extends BaseFragment implements View.OnClic
 
     private void sendEmailButtonClick() {
         String email = getText(emailEditText);
-        if (!AppUtils.validEmail(email)) {
+        if (!email.isEmpty() && !AppUtils.validEmail(email)) {
             emailEditText.setError(getString(R.string.invalid_mail));
+            return;
+        }
+        if (email.isEmpty()) {
+            emailEditText.setError(getString(R.string.required));
             return;
         }
         int RECEIPT = 1;

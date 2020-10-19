@@ -2,6 +2,7 @@ package com.example.amrel.paybuttonexample;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -85,8 +86,17 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                     merchantIdEditText.setError(getString(R.string.required));
                     hasErrors = true;
                 }
-                if (amount.isEmpty() || amount.equals("0")) {
-                    amountEditText.setError(getString(R.string.required));
+
+                try {
+                    if (amount.isEmpty() || Float.parseFloat(amount) == 0) {
+                        amountEditText.setError(getString(R.string.required));
+                        hasErrors = true;
+                    }
+                } catch (NumberFormatException ex) {
+
+                }
+                if (amount.equals(".")) {
+                    amountEditText.setError(getString(R.string.invalid_amount));
                     hasErrors = true;
                 }
 
@@ -103,7 +113,12 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                 PayButton payButton = new PayButton(MainActivity.this);
                 payButton.setMerchantId(merchantId); // Merchant id
                 payButton.setTerminalId(terminalId); // Terminal  id
-                payButton.setAmount(Double.valueOf(amount)); // Amount
+
+
+                try {
+                    payButton.setAmount(Double.parseDouble(amount)); // Amount
+                } catch (NumberFormatException ex) {
+                }
                 String a = currencyEditText.getText().toString();
                 if (a.isEmpty()) {
                     payButton.setCurrencyCode(0); // Currency Code

@@ -126,7 +126,7 @@
                     android:drawableEnd="@drawable/ic_card_colored"
                     android:hint="@string/cvc"
                     android:imeOptions="actionDone"
-                    android:inputType="numberSigned"
+                    android:inputType="number"
                     android:maxLength="3"
                     android:maxLines="1"
                     android:paddingEnd="8dp"

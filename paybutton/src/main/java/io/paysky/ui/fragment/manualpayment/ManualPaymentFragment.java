@@ -156,23 +156,27 @@ public class ManualPaymentFragment extends BaseFragment implements ManualPayment
 
         if (cardNumberEditText.getText().toString().isEmpty()) {
             isValidInputs = false;
-            cardNumberEditText.setError(getString(R.string.invalid_card_number_length));
+            cardNumberEditText.setError(getString(R.string.required));
         }
-        if (!cardNumberEditText.getText().toString().isEmpty()
-                && !CardsValidation.luhnCheck(cardNumber)) {
+        if (!cardNumberEditText.getText().toString().isEmpty() && !CardsValidation.luhnCheck(cardNumber)) {
             isValidInputs = false;
             cardNumberEditText.setError(getString(R.string.invalid_card_number_length));
         }
 
         if (isEmpty(ownerName)) {
             isValidInputs = false;
-            cardOwnerNameEditText.setError(getString(R.string.enter_valid_owner));
+            cardOwnerNameEditText.setError(getString(R.string.required));
         }
 
-        if (isEmpty(expireDate) || expireDate.length() < 4) {
+        if (!isEmpty(expireDate) && expireDate.length() < 4) {
             isValidInputs = false;
             expireDateEditText.setError(getString(R.string.invalid_expire_date));
-        } else {
+        }
+        else if (isEmpty(expireDate)){
+            isValidInputs = false;
+            expireDateEditText.setError(getString(R.string.required));
+        }
+        else {
             // validate that expire date large than today.
             int enteredMonth = Integer.parseInt(expireDate.substring(0, 2));
             int enteredYear = Integer.parseInt(expireDate.substring(2));
@@ -195,7 +199,13 @@ public class ManualPaymentFragment extends BaseFragment implements ManualPayment
             }
         }
 
-        if (isEmpty(ccv) || ccv.length() < 3) {
+
+        if (isEmpty(ccv)) {
+            isValidInputs = false;
+            ccvEditText.setError(getString(R.string.required));
+        }
+
+        if (!isEmpty(ccv)  && ccv.length() < 3) {
             isValidInputs = false;
             ccvEditText.setError(getString(R.string.invalid_ccv));
         }
