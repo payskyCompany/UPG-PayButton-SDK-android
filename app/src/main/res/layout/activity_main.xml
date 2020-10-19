@@ -49,6 +49,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:text="10920989408"
                     android:id="@+id/merchant_id_editText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -71,6 +72,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:text="96780263"
                     android:id="@+id/terminal_id_editText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -138,6 +140,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:text="62303764646636362D616163322D343930652D613763352D336335643665393364623139"
                     android:id="@+id/secureHash_editText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
