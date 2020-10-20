@@ -144,7 +144,6 @@
                     android:layout_weight="7" />
             </LinearLayout>
 
-
             <LinearLayout
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_width="match_parent"
