@@ -36,16 +36,16 @@ Example:-
                 }
 			  
 3- in your build.gradle file in app level in dependencies{} add :-    
-implementation 'com.github.payskyCompany:UPG-PayButton-SDK-android:1.0.0'
+implementation 'com.github.payskyCompany:UPG-PayButton-SDK-android:1.0.3'
 
 Example:-
 dependencies {
-      implementation 'com.github.payskyCompany:UPG-PayButton-SDK-android:1.0.0'
+      implementation 'com.github.payskyCompany:UPG-PayButton-SDK-android:1.0.3'
 }
 
 4- Sync your project.
 
-Note:- version 1.0.0 may not be the last version check Releases in github to get latest version.
+Note:- version 1.0.3 may not be the last version check Releases in github to get latest version.
 ```
 
 ### Using SDK
@@ -188,7 +188,7 @@ in your project, encrypt them before save them in project.
 
 ## Authors
 
-**PaySky Company** - (https://www.paysky.io)
+**PaySky Company** - (http://www.egyptianbanks.com)
 
 ## Sample Project
 **https://github.com/payskyCompany/UPG-PayButton-SDK-android**
