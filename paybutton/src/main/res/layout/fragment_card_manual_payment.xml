@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:context="io.paysky.ui.fragment.manualpayment.ManualPaymentFragment">
+            tools:context="io.upg.ui.fragment.manualpayment.ManualPaymentFragment">
 
             <TextView
                 android:layout_marginBottom="@dimen/_7sdp"
@@ -45,7 +45,7 @@
                     android:layout_height="match_parent"
                     android:background="@color/accentColor" />
 
-                <io.paysky.ui.custom.CardEditText
+                <io.upg.ui.custom.CardEditText
                     android:id="@+id/card_number_editText"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -96,7 +96,7 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_12sdp">
 
-                <io.paysky.ui.custom.ExpiryDate
+                <io.upg.ui.custom.ExpiryDate
                     android:id="@+id/expire_date_editText"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/_36sdp"

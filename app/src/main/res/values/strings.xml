@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PaySky PayButton Demo</string>
+    <string name="app_name">UPG PayButton Demo</string>
     <string name="required">Required field</string>
     <string name="english">English</string>
     <string name="merchant_id">Merchant ID</string>

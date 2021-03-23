@@ -2,7 +2,6 @@ package com.example.amrel.paybuttonexample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,13 +12,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import io.paysky.data.model.SuccessfulCardTransaction;
-import io.paysky.data.model.SuccessfulWalletTransaction;
-import io.paysky.exception.TransactionException;
-import io.paysky.ui.PayButton;
-import io.paysky.util.AllURLsStatus;
-import io.paysky.util.AppUtils;
-import io.paysky.util.LocaleHelper;
+import io.upg.data.model.SuccessfulCardTransaction;
+import io.upg.data.model.SuccessfulWalletTransaction;
+import io.upg.exception.TransactionException;
+import io.upg.ui.PayButton;
+import io.upg.util.AllURLsStatus;
+import io.upg.util.AppUtils;
+import io.upg.util.LocaleHelper;
 
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener, View.OnClickListener {
 
