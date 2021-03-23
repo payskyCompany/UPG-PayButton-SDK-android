@@ -2,7 +2,7 @@
 
 ## PaySky Button SDK
 
-The purpose of this SDK to help programmers to use PaySky payment SDK .
+The purpose of this SDK to help programmers to use UPG payment SDK .
 
 ## Getting Started
 
